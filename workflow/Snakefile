@@ -1,7 +1,7 @@
 from snakemake.utils import min_version
 min_version("6.0")
 
-configfile: "config/config.yaml"
+configfile: "config/config-e0102.yaml"
 
 module chandra_data_workflow:
     snakefile:
@@ -15,4 +15,5 @@ include: "rules/run-jolideco.smk"
 
 rule all:
     input: 
+        expand("results/{config_name}/jolideco/{config_name}-result-jolideco.fits", config_name=config["chandra-data"]["name"])
     default_target: True

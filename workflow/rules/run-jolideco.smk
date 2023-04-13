@@ -1,6 +1,6 @@
 rule run_jolideco:
     input:
-        expand("results/{{config_name}}/jolideco/input/{{config_name}}-{event_type}-maps.fits", event_type=config["fermi-lat-data"]["event_types"]),
+        expand("results/{{config_name}}/{obs_id}/maps/{{config_name}}-{obs_id}-counts.fits", obs_id=config["chandra-data"]["obs_ids"]),
     log:
         notebook="results/{config_name}/jolideco/{config_name}-jolideco.ipynb"
     output:

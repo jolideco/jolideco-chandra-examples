@@ -30,11 +30,11 @@ chandra-data:
   obs_id_ref: 8365
   roi:
     center:
-      frmae: icrs
-      ra: "01h04m02.40s"
-      dec: "-72d01m55.30s"
+      frame: icrs
+      lon: "01h04m02.40s"
+      lat: "-72d01m55.30s"
     width: 2.8 arcmin
-    bin_size: 0.002 deg
+    bin_size: 0.002
     energy_range:
       min: 0.5 keV
       max: 7 keV
