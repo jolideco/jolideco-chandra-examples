@@ -1,0 +1,52 @@
+name: E0102
+sub_name: broadband
+obs_ids:
+- 120
+- 968
+- 3828
+- 12147
+- 1231
+- 1234
+obs_id_ref: 120
+roi:
+  center:
+    ra: "01h04m02.40s"
+    dec: "-72d01m55.30s"
+  width: 0.015 deg
+energy_range:
+  min: 0.5 keV
+  max: 7 keV
+psf:
+  n_iter: 1_000
+  min_size: 25
+  mono_energy: 1.5
+jolideco:
+  obs_ids:
+    - 120
+    - 968
+    - 3828
+    - 12147
+    - 1231
+    - 1234
+  deconvolver:
+    n_epochs: 1_000
+    beta: 1.0
+    device: cuda:0
+  components:
+    flux:
+      upsampling_factor: 2
+      use_log_flux: true
+      prior:
+        type: gmm-patches
+        stride: 4
+        jitter: false
+        cycle_spin: true
+        cycle_spin_subpix: true
+        device: cuda:0
+        gmm:
+          type: zoran-weiss
+          stride: 4
+        norm:
+          type: asinh
+          alpha: 10
+          beta: 1000
