@@ -1,52 +1,61 @@
-name: E0102
-sub_name: broadband
-obs_ids:
-- 120
-- 968
-- 3828
-- 12147
-- 1231
-- 1234
-obs_id_ref: 120
-roi:
-  center:
-    ra: "01h04m02.40s"
-    dec: "-72d01m55.30s"
-  width: 0.015 deg
-energy_range:
-  min: 0.5 keV
-  max: 7 keV
-psf:
-  n_iter: 1_000
-  min_size: 25
-  mono_energy: 1.5
-jolideco:
+chandra-data:
+  name: e0102
+  path_data: data
   obs_ids:
-    - 120
-    - 968
-    - 3828
-    - 12147
-    - 1231
-    - 1234
-  deconvolver:
-    n_epochs: 1_000
-    beta: 1.0
-    device: cuda:0
-  components:
-    flux:
-      upsampling_factor: 2
-      use_log_flux: true
-      prior:
-        type: gmm-patches
-        stride: 4
-        jitter: false
-        cycle_spin: true
-        cycle_spin_subpix: true
-        device: cuda:0
-        gmm:
-          type: zoran-weiss
-          stride: 4
-        norm:
-          type: asinh
-          alpha: 10
-          beta: 1000
+    - 1308
+    - 1311
+    - 1530
+    - 1531
+    - 2843
+    - 2844
+    - 2850
+    - 2851
+    - 3519
+    - 3520
+    - 3544
+    - 3545
+    - 5123
+    - 5124
+    - 5130
+    - 5131
+    - 6042
+    - 6043
+    - 6074
+    - 6075
+    - 6758
+    - 6759
+    - 6765
+    - 8365
+    - 9694
+  obs_id_ref: 8365
+  roi:
+    center:
+      frmae: icrs
+      ra: "01h04m02.40s"
+      dec: "-72d01m55.30s"
+    width: 2.8 arcmin
+    bin_size: 0.002 deg
+    energy_range:
+      min: 0.5 keV
+      max: 7 keV
+  psf_simulator: marx
+  irfs:
+    e0102:
+      spectrum:
+        center:
+          frame: icrs
+          lon: "01h04m02.40s"
+          lat: "-72d01m55.30s"
+        radius: 1 arcmin
+        energy_range:
+          min: 0.5 keV
+          max: 7.0 keV
+        energy_groups: 5
+        energy_step: 0.01
+      psf:
+        blur: 0.07
+        readout_streak: false
+        pileup: false
+        extended: true
+        minsize: 125
+        numiter: 2
