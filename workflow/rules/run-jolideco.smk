@@ -1,6 +1,8 @@
 rule run_jolideco:
     input:
         expand("results/{{config_name}}/{obs_id}/maps/{{config_name}}-{obs_id}-counts.fits", obs_id=config["chandra-data"]["obs_ids"]),
+        expand("results/{{config_name}}/{obs_id}/maps/{{config_name}}-{obs_id}-psf.fits", obs_id=config["chandra-data"]["obs_ids"]),
+        expand("results/{{config_name}}/{obs_id}/maps/{{config_name}}-{obs_id}-exposure.fits", obs_id=config["chandra-data"]["obs_ids"]),
     log:
         notebook="results/{config_name}/jolideco/{config_name}-jolideco.ipynb"
     output:
