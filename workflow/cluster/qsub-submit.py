@@ -7,8 +7,8 @@ from snakemake.utils import read_job_properties
 jobscript = sys.argv[1]
 job_properties = read_job_properties(jobscript)
 
-name_template = "{obs_id}"
-name = job_properties["rule"] + name_template.format(**job_properties["wildcards"])
+name_template = "-".join(job_properties["wildcards"].values())
+name = job_properties["rule"] + "-" + name_template
 
 ARGS = {
     "-S": "/bin/bash",
