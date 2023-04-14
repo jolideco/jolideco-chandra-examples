@@ -31,9 +31,9 @@ chandra-data:
   roi:
     center:
       frame: icrs
-      lon: "01h04m02.40s"
-      lat: "-72d01m55.30s"
-    width: 2.8 arcmin
+      lon: "01h04m02.00s"
+      lat: "-72d01m52.30s"
+    width: 1 arcmin
     bin_size: 0.5
     energy_range:
       min: 0.5 keV
@@ -44,9 +44,9 @@ chandra-data:
       spectrum:
         center:
           frame: icrs
-          lon: "01h04m02.40s"
-          lat: "-72d01m55.30s"
-        radius: 1 arcmin
+          lon: "01h04m02.00s"
+          lat: "-72d01m52.30s"
+        radius: 0.3 arcmin
         energy_range:
           min: 0.5 keV
           max: 7.0 keV
@@ -58,7 +58,7 @@ chandra-data:
         pileup: false
         extended: true
         minsize: 125
-        numiter: 2
+        numiter: 500
   ciao:
     chandra_repro:
       cleanup: true
