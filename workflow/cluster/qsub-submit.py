@@ -7,7 +7,7 @@ from snakemake.utils import read_job_properties
 jobscript = sys.argv[1]
 job_properties = read_job_properties(jobscript)
 
-name_template = "{config_name}-{obs_id}"
+name_template = "{obs_id}"
 name = job_properties["rule"] + name_template.format(**job_properties["wildcards"])
 
 ARGS = {
