@@ -1,5 +1,5 @@
 chandra-data:
-  name: e0102
+  name: e0102-broadband
   path_data: data
   obs_ids:
     - 1308
