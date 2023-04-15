@@ -1,0 +1,42 @@
+chandra-data:
+  name: e0102
+  path_data: data
+  obs_ids:
+    - 1308
+    - 9694
+  obs_id_ref: 9694
+  roi:
+    center:
+      frame: icrs
+      lon: "01h04m02.00s"
+      lat: "-72d01m52.30s"
+    width: 1 arcmin
+    bin_size: 0.5
+    energy_range:
+      min: 0.5 keV
+      max: 7 keV
+  psf_simulator: marx
+  irfs:
+    e0102:
+      spectrum:
+        center:
+          frame: icrs
+          lon: "01h04m02.00s"
+          lat: "-72d01m52.30s"
+        radius: 0.35 arcmin
+        energy_range:
+          min: 0.5 keV
+          max: 7.0 keV
+        energy_groups: 5
+        energy_step: 0.01
+      psf:
+        blur: 0.07
+        readout_streak: false
+        pileup: false
+        extended: true
+        minsize: 125
+        numiter: 5
+  ciao:
+    chandra_repro:
+      cleanup: true
+      clobber: true
