@@ -58,7 +58,7 @@ chandra-data:
         pileup: false
         extended: true
         minsize: 125
-        numiter: 500
+        numiter: 100
   ciao:
     chandra_repro:
       cleanup: true
