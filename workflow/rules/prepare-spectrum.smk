@@ -1,6 +1,6 @@
 rule prepare_spectrum:
     input:
-        expand("results/{{config_name}}/{obs_id}/spectra/{{irf_label}}/{{config_name}}-{obs_id}-{{irf_label}}.pi", obs_id=config["chandra-data"]["obs_ids"])
+        "resources/sherpa-model-e0102.py",
     output:
         filename_spectrum="results/{config_name}/spectral-fit/{irf_label}/{config_name}-{irf_label}-source-flux-chart.dat"
     log:
