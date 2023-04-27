@@ -2,7 +2,7 @@ from pathlib import Path
 
 from sherpa_contrib.chart import save_chart_spectrum
 
-with Path("../../resources/sherpa-model-e0102.py").open("r") as fh:
+with Path("resources/sherpa-model-e0102.py").open("r") as fh:
     exec(fh.read())
 
 e_min = 0.5
