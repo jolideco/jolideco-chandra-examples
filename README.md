@@ -1,4 +1,3 @@
-# snakemake-workflow-template
-My personal Snakemake workflow template.
+# Jolideco Chandra Example
 
-There is also the [official template](https://github.com/snakemake-workflows/snakemake-workflow-template) but I prefer to have the full directory structure pre-defined as shown in the [snakemake docs](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html#use-with-modules).  
+This repositiory includes an example anlaysis of Chandra data from the supernova remnant E102 with Jolideco.
