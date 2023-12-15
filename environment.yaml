@@ -4,6 +4,8 @@ name: jolideco-chandra-examples
 channels:
   - conda-forge
   - bioconda
+  - pytorch
+  - nvidia
 
 variables:
   PYTHONNOUSERSITE: "1"
@@ -14,3 +16,9 @@ dependencies:
   - pydantic>=1.9.0
   - astropy>=5.2.0
   - regions>=0.5
+  - nbconvert
+  - ipython
+  - ipykernel
+  - gammapy>=1.0
+  - pytorch-cuda=11.6
+  - pytorch==1.13.1
