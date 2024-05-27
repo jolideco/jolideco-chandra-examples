@@ -20,5 +20,5 @@ dependencies:
   - ipython
   - ipykernel
   - gammapy>=1.0
-  - pytorch-cuda=11.6
-  - pytorch==1.13.1
+  - pytorch=2.3
+  - pytorch-cuda=12.1
