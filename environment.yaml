@@ -11,9 +11,9 @@ variables:
   PYTHONNOUSERSITE: "1"
 
 dependencies:
-  - python=3.10
-  - snakemake>=6.4.1
-  - pydantic<=2.0
+  - python
+  - snakemake>=6.4.1,<7.32
+  - pydantic<2.0
   - astropy>=5.2.0
   - regions>=0.5
   - nbconvert
